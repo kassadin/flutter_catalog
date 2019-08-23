@@ -37,7 +37,7 @@ class MyAppSettings extends ChangeNotifier {
       tooltip: 'Bookmark',
       icon: Icon(
         this.isStarred(routeName) ? Icons.star : Icons.star_border,
-        color: this.isStarred(routeName) ? Colors.yellow : Colors.grey,
+        color: this.isStarred(routeName) ? Colors.yellow : Colors.white,
       ),
       onPressed: () => this.toggleStarred(routeName),
     );
