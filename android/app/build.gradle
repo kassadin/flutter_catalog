@@ -54,20 +54,14 @@ android {
     }
 
     signingConfigs {
-    release {
-        keyAlias keystoreProperties['keyAlias']
-        keyPassword keystoreProperties['keyPassword']
-        storeFile file(keystoreProperties['storeFile'])
-        storePassword keystoreProperties['storePassword']
-    }
     }
     buildTypes {
+        debug{}
         release {
             // Add multidex-config.pro and this line to void multidex problem
             // for API version <21. 
             // C.f. https://developer.android.com/studio/build/multidex#keep.
             multiDexKeepProguard file('multidex-config.pro')
-            signingConfig signingConfigs.release
         }
     }
 }
